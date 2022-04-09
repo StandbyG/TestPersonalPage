@@ -1,0 +1,84 @@
+:root{
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c80;
+    --shadow-color: #8888;
+    --button-color: #61dafb;
+    --button-color-active: #fff;
+    --button-text-color: #000;
+    --primary-highlight: #61dafb;
+    --secondary-highlight: #ffd700;
+    --padding-section: 2em 0;
+    --padding-container: 0 2em;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+}
+.body{
+    background-color: var(--secondary-theme-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    min-height: 200vh;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-shadow-color);
+}
+.header-nav{
+    padding: 0.5em 0;
+}
+.header-nav__container{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.header-nav__linl-logo-container{
+    display: flex;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header-nav__link-logo{
+    height: 100%;
+}
+.header-nav__menu-link-list{
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header-nav__menu-list-item{
+    display: flex;
+}
+.header-nav__menu-link{
+    position: relative;
+    color:var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: var(--all-transitions);
+}
+.header-nav__menu-link:hover{
+    color: var(--primary-highlight);
+}
+.header-nav__menu-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.125rem;
+    width: 0;
+    height: 0.0625rem;
+    background-color: var(--secondary-highlight);
+    transition: var(--all-transitions);
+}
+.header-nav__menu-link:hover::after{
+    width:100%;
+}
